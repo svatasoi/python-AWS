@@ -1,0 +1,2 @@
+access_key_ID: AKIAJXX6VWUG457HWJDA
+secret_access_key: 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

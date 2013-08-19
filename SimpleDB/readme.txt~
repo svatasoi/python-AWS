@@ -1,0 +1,40 @@
+SimpleDB via Python
+by: Sorin Vatasoiu Jr (sorin.vatasoiu@gmail.com)
+
+Steps prior to using these scripts:
+1. Install python 2.7 (not python 3.0+, because boto does not work for that version)
+2. Install boto, a python package/API for interfacing with any Amazon web service
+3. Make an AWS account
+
+For the next two steps, go to https://portal.aws.amazon.com/gp/aws/securityCredentials
+(please leave a single space between the colon and the key!!)
+4. Set your Access Key ID to the first line of the keys.txt file 
+5. Set your Secret Access Key to the second line of the keys.txt file
+
+
+These scripts can be run directly from the terminal/command prompt or from the python shell
+As of 7/16/2013, all functions assume your intended domain is the first domain retrieved by the get_all_domains() function. This can be changed.
+
+
+
+Example Terminal commands:
+add new row (no spaces in keys or values!)
+$ python addItem.py -n beagleboneTest --keys=["key1","key2","key3"] --values=[1,2,3]
+
+retrieve all rows
+$ python sdbGetAll.py
+
+get specific item by name
+$ python getItem.py -n <item name>
+
+_____________________________________________________
+(steps below are for use with BeagleBone)
+Setup for BeagleBone
+1. Install Python packages: py_compile, distutils, etc. Angstrom is missing a lot of these "standard" libraries...
+2. Install Boto (AWS driver for Python)
+3. Make file in PythonFiles with code
+
+
+Setup
+$ cd /media/BEAGLEBONE/PythonFiles/
+$ x11vnc -bg -o %HOME/.x11vnc.log.%VNCDISPLAY -auth /var/run/gdm/auth-for-gdm*/database -display :0
