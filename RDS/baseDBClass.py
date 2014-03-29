@@ -131,5 +131,4 @@ class myTable:
         for col in self.description:
             print(col)
 
-db = mydbClass("my-mysql-db.cvhvigzoraji.us-east-1.rds.amazonaws.com", "root", "password123","sorinmysql")
 
